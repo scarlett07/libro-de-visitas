@@ -1,19 +1,28 @@
-//Marerialize
-
-$('#textarea1').val('New Text');
-$('#textarea1').trigger('autoresize');
-
 
 // Publicar texto
+var come = $('#icon_prefix2').val();
+
+
 
 $(document).ready(function() {
-  $('#enviar').click(getComent);
+  $('#icon_prefix2').keyup(comentEdit(come));
+  $('#icon_prefix2').keyup(getComent());
+
 });
 
 function getComent(event){
-  event.preventDefault();
-  var cometario = $('#icon_prefix2').val()
+//  event.preventDefault();
+//  console.log(comentario);
+  //
+  // if (comentario.length>0){
+  //   $('#icon_prifix2').keyup(comentEdit(comentario));
+  //
+  // }
 
-  console.log(cometario);
+}
+
+function comentEdit(comentario){
+  var comentEtitado = $('#coment-edit');
+  comentEtitado.html(comentario);
 
 }
